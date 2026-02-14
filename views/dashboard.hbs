@@ -1,0 +1,53 @@
+{{set "title" "Dashboard"}}
+{{set "description" "Overview of your application and system status."}}
+
+<div class="max-w-7xl mx-auto w-full px-4 py-24">
+    {{!-- Dashboard Header --}}
+    <header class="mb-16">
+        <h1 class="text-3xl font-bold text-black mb-2 tracking-tighter">
+            {{title}}
+        </h1>
+        <p class="text-neutral-500 text-sm">{{description}}</p>
+    </header>
+
+    <div class="gap-8">
+        {{!-- Profile Section (Data dari Controller via userData) --}}
+        <div class="lg:col-span-2 bg-white border border-neutral-200 rounded-xl p-6 shadow-sm">
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-sm font-semibold uppercase tracking-wider text-neutral-500">Profile Info</h2>
+                <span class="px-2 py-1 text-[10px] font-bold bg-green-100 text-green-700 rounded-full uppercase tracking-tighter">Active</span>
+            </div>
+            
+            <div class="space-y-6">
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 rounded-full bg-black flex items-center justify-center text-white font-bold border border-black shadow-lg shadow-black/10">
+                        {{#if userData.fullName}}
+                            {{slice userData.fullName 0 1}}
+                        {{else}}
+                            {{slice userData.email 0 1}}
+                        {{/if}}
+                    </div>
+                    <div>
+                        <p class="text-xs text-neutral-400 font-medium leading-none mb-1.5">Full Name</p>
+                        <p class="text-lg font-bold text-neutral-900 tracking-tight">
+                            {{#if userData.fullName}}{{ userData.fullName }}{{else}}Not Set{{/if}}
+                        </p>
+                    </div>
+                </div>
+
+                <div class="pt-6 border-t border-neutral-100 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <p class="text-xs text-neutral-400 font-medium leading-none mb-2">Email Address</p>
+                        <p class="text-sm font-semibold text-neutral-800">{{ userData.email }}</p>
+                    </div>
+                    <div>
+                        <p class="text-xs text-neutral-400 font-medium leading-none mb-2">Account ID</p>
+                        <p class="text-[10px] font-mono text-neutral-500 bg-neutral-50 p-2 rounded-lg border border-neutral-100 truncate">
+                            {{ userData.id }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

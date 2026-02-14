@@ -1,0 +1,53 @@
+<div class="flex-grow flex flex-col items-center justify-center bg-white px-6 min-h-[70vh]">
+    <div class="max-w-2xl w-full py-24">
+        {{!-- Brand Header --}}
+        <div class="mb-12 text-center md:text-left">
+            <h1 class="text-5xl font-extrabold tracking-tighter text-black mb-2">
+                fxd4<span class="text-neutral-300">.js</span>
+            </h1>
+            <p class="text-[10px] font-mono text-neutral-400 uppercase tracking-[0.3em]">
+                Fast eXecutable Delivery 4
+            </p>
+        </div>
+
+        {{!-- Technical Status --}}
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+            <div class="space-y-5">
+                <h3 class="text-[10px] font-bold text-black uppercase tracking-widest border-b border-black pb-2 inline-block">Environment</h3>
+                <ul class="space-y-3 text-[13px] text-neutral-500 font-medium">
+                    <li class="flex justify-between border-b border-neutral-50 pb-1">
+                        <span>Status</span>
+                        <span class="text-green-500 font-bold italic">Ready</span>
+                    </li>
+                    <li class="flex justify-between border-b border-neutral-50 pb-1">
+                        <span>Database</span>
+                        <span class="text-black">Supabase</span>
+                    </li>
+                    <li class="flex justify-between border-b border-neutral-50 pb-1">
+                        <span>Engine</span>
+                        <span class="text-black">Node.js 23.7</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="space-y-5">
+                <h3 class="text-[10px] font-bold text-black uppercase tracking-widest border-b border-black pb-2 inline-block">Get Started</h3>
+                <div class="space-y-3">
+                    <a href="/dashboard" class="group flex items-center justify-between text-[13px] text-neutral-600 hover:text-black transition-colors">
+                        <span>Open Dashboard</span>
+                        <span class="transform group-hover:translate-x-1 transition-transform">&rarr;</span>
+                    </a>
+                    <a href="/dashboard" class="group flex items-center justify-between text-[13px] text-neutral-600 hover:text-black transition-colors">
+                        <span>Read Documentation</span>
+                        <span class="transform group-hover:translate-x-1 transition-transform">&rarr;</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        {{!-- Quick Start Code --}}
+        <div class="bg-neutral-50 rounded-xl p-8 border border-neutral-100">
+            <p class="text-[12px] text-neutral-700">// Edit this page in views/home.hbs</p>
+        </div>
+    </div>
+</div>
